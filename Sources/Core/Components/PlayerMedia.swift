@@ -35,10 +35,10 @@ import AVFoundation
 public protocol PlayerMedia: CustomStringConvertible {
 
     /// URL set to the AVURLAsset
-    var url: URL { get }
+    var url: URL { get set }
 
     /// Type of the media
-    var type: MediaType { get }
+    var type: MediaType { get set}
 
     /// Asset options use by AVURLAsset
     var assetOptions: [String: Any]? { get }
@@ -48,6 +48,12 @@ public protocol PlayerMedia: CustomStringConvertible {
 
     func getMetadata() -> PlayerMediaMetadata?
     func setMetadata(_ metadata: PlayerMediaMetadata)
+    
+    func getURL(url: URL) -> URL
+    func updateURL(url: URL)
+    
+    func getAssetOption() -> [String: Any]?
+    func updateAssetOption(asset: [String: Any]?)
 }
 
 public extension PlayerMedia {

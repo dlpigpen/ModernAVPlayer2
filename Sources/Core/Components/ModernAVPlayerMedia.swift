@@ -27,7 +27,7 @@
 public class ModernAVPlayerMedia: PlayerMedia {
 
     public var url: URL
-    public let type: MediaType
+    public var type: MediaType
     public var metadata: ModernAVPlayerMediaMetadata?
     public var assetOptions: [String: Any]?
 

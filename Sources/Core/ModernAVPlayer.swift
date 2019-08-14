@@ -144,6 +144,25 @@ public final class ModernAVPlayer: NSObject, ModernAVPlayerExposable {
         context.updateMetadata(metadata)
     }
     
+    ///
+    /// Replaces the current URL
+    ///
+    /// - parameter url: url to load
+    ///
+    public func updateURL(_ url: URL) {
+        context.updateURL(url: url)
+    }
+    
+    ///
+    /// Replaces the asset dictionary
+    ///
+    /// - parameter url: url to load
+    ///
+    public func updateURL(_ asset: [String: Any]?) {
+        context.updateAsset(asset: asset)
+    }
+
+    
     /// Begins playback of the current item
     public func play() {
         context.play()
